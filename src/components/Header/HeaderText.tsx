@@ -6,14 +6,20 @@ const headerText = () => {
 
   return (
     <h1 className={'header__title'}>
-      <FadeInUpAnimation time={800} classKey={'first'}>
-        <span className={'header__title__first'}>
-          {words[0].split('').map((letter, index) => {
-            return <LetterUpAnimation letter={letter} key={letter + index} />;
-          })}
-        </span>{' '}
-      </FadeInUpAnimation>
-      <FadeInUpAnimation time={1500} classKey={'second'}>
+      <span className={'header__title__first'}>
+        {words[0].split('').map((letter, index) => {
+          return (
+            <FadeInUpAnimation
+              classKey={index + letter}
+              key={letter + index}
+              time={index * 350}
+            >
+              <LetterUpAnimation letter={letter} />
+            </FadeInUpAnimation>
+          );
+        })}
+      </span>{' '}
+      <FadeInUpAnimation time={2800} classKey={'second'}>
         <span className={'header__title__second'}>
           {words[1].split('').map((letter, index) => {
             return <LetterUpAnimation letter={letter} key={letter + index} />;

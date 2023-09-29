@@ -53,6 +53,7 @@
 }
 
 .header__title__first {
+    display: inline-flex;
     font-palette: --palette-1;
 }
 
