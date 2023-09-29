@@ -3,14 +3,30 @@
     It is imported in App.js
 */
 
+@font-palette-values --palette-2 {
+    font-family: 'Nabla';
+    override-colors:
+        1 #41ECB9,
+        2 #75FFAA,
+        3 #3C6EFF,
+        4 #489D76,
+        5 #8AFFB1,
+        6 #1EE1FF,
+        7 #00A0E1,
+        8 #1EE1FF,
+        9 #ffffff;
+}
 
+/* --------------------- */
 /* ---- HEADER CSS ---- */
+/* ------------------- */
 .header {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Nabla', cursive;
 }
 
 .header__title {
@@ -18,32 +34,39 @@
     line-height: 1.1;
 }
 
-.header__title__word {
+.header__title__first , .header__title__second {
+    font-palette: --palette-2;
+}
+/* --------------------- */
+
+
+/* ---------------------------------- */
+/* ---- Letter Animation UP CSS ---- */
+/* -------------------------------- */
+.letter-up__box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 0.7em;
+    height: 1em;
+    cursor: url("/src/assets/Hands-So-So-icon.png"), auto;
+}
+
+.letter-up__word {
+    position: absolute;
     display: inline-block;
     font-weight: 500;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform: rotate(0deg) translate(0, 0);
     margin: 0;
 }
 
-.header__title__first {
-    color: var(--teal-400);
+.letter-up__word--rotate-even {
+    transform: rotate(-10deg) translate(0, -1.2rem);
 }
 
-.header__title__second {
-    color: var(--teal-400);
-}
-
-.header__title__word--up {
-    margin: 0.5rem;
-    color: var(--emerald-200);
-}
-
-.header__title__word--rotate-even {
-    transform: rotate(10deg) translate(0, -1rem);
-}
-
-.header__title__word--rotate-odd {
-    transform: rotate(-10deg) translate(0, -1rem);
+.letter-up__word--rotate-odd {
+    transform: rotate(10deg) translate(0, -1.2rem);
 }
 /* --------------------- */
