@@ -7,7 +7,7 @@ const Header = () => {
 
     const index = Array.from(letter.parentElement!.children).indexOf(letter);
 
-    index / 2 === 0
+    index % 2 === 0
       ? letter.classList.add('header__title__word--rotate-even')
       : letter.classList.add('header__title__word--rotate-odd');
   };
@@ -18,7 +18,7 @@ const Header = () => {
 
     const index = Array.from(letter.parentElement!.children).indexOf(letter);
 
-    index / 2 === 0
+    index % 2 === 0
       ? letter.classList.remove('header__title__word--rotate-even')
       : letter.classList.remove('header__title__word--rotate-odd');
   };
