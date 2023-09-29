@@ -1,0 +1,49 @@
+/*
+    This is a global CSS file for all components.
+    It is imported in App.js
+*/
+
+
+/* ---- HEADER CSS ---- */
+.header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+.header__title__word {
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+    transform: rotate(0deg) translate(0, 0);
+    margin: 0;
+}
+
+.header__title__first {
+    color: var(--teal-400);
+}
+
+.header__title__second {
+    color: var(--teal-400);
+}
+
+.header__title__word--up {
+    margin: 0.5rem;
+    color: var(--emerald-200);
+}
+
+.header__title__word--rotate-even {
+    transform: rotate(10deg) translate(0, -1rem);
+}
+
+.header__title__word--rotate-odd {
+    transform: rotate(-10deg) translate(0, -1rem);
+}
+/* --------------------- */

@@ -1,9 +1,10 @@
-import './App.css';
+import './components/Components.css';
+import Header from './components/Header.tsx';
 
 const App = () => {
   return (
     <div className={'app'}>
-      <p></p>
+      <Header />
     </div>
   );
 };
