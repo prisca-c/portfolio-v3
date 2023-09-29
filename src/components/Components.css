@@ -3,16 +3,30 @@
     It is imported in App.js
 */
 
+@font-palette-values --palette-1 {
+    font-family: 'Nabla';
+    override-colors:
+        1 #28866b,
+        2 #39965d,
+        3 #145641,
+        4 #489D76,
+        5 #8AFFB1,
+        6 #1effbb,
+        7 #00A0E1,
+        8 #1EE1FF,
+        9 #ffffff;
+}
+
 @font-palette-values --palette-2 {
     font-family: 'Nabla';
     override-colors:
-        1 #41ECB9,
-        2 #75FFAA,
-        3 #3C6EFF,
+        1 #28866b,
+        2 #39965d,
+        3 #145641,
         4 #489D76,
         5 #8AFFB1,
-        6 #1EE1FF,
-        7 #00A0E1,
+        6 #00A0E1,
+        7 #1effbb,
         8 #1EE1FF,
         9 #ffffff;
 }
@@ -30,11 +44,19 @@
 }
 
 .header__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 3.2em;
     line-height: 1.1;
 }
 
-.header__title__first , .header__title__second {
+.header__title__first {
+    font-palette: --palette-1;
+}
+
+.header__title__second {
     font-palette: --palette-2;
 }
 /* --------------------- */
