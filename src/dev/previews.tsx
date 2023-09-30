@@ -1,8 +1,9 @@
-import React from 'react';
 import { ComponentPreview, Previews } from '@react-buddy/ide-toolbox';
 import { PaletteTree } from './palette';
 import LandingPage from '../pages/LandingPage.tsx';
 import App from '../App.tsx';
+import Header from '../components/Header/Header.tsx';
+import MyStack from '../components/MyStack/MyStack.tsx';
 
 const ComponentPreviews = () => {
   return (
@@ -15,6 +16,9 @@ const ComponentPreviews = () => {
       </ComponentPreview>
       <ComponentPreview path="/App">
         <App />
+      </ComponentPreview>
+      <ComponentPreview path="/Header">
+        <Header />
       </ComponentPreview>
     </Previews>
   );
