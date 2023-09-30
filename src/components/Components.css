@@ -159,6 +159,7 @@
 /* ---- Fade In UP Animation CSS ---- */
 /* --------------------------------- */
 .fade-in-up-animation {
+    display: inline-block;
     opacity: 0;
     transform: translateY(2.5rem);
     transition: opacity 1.3s ease-in-out, transform 1s ease-in-out;
@@ -176,6 +177,7 @@
 /* ---- Fade In Animation CSS ---- */
 /* ------------------------------ */
 .fade-in-animation {
+    display: inline-block;
     opacity: 0;
     transition: opacity 1.3s ease-in-out;
 }
@@ -189,6 +191,7 @@
 /* ---- Bouncing Animation CSS ---- */
 /* ------------------------------- */
 .bouncing-animation {
+    display: inline-block;
     animation: bouncing 1.5s ease-in-out infinite;
 }
 

@@ -5,7 +5,7 @@ type BouncingAnimationProps = {
 };
 
 const BouncingAnimation = ({ children }: BouncingAnimationProps) => {
-  return <div className={'bouncing-animation'}>{children}</div>;
+  return <span className={'bouncing-animation'}>{children}</span>;
 };
 
 export default BouncingAnimation;

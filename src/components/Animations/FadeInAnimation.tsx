@@ -24,7 +24,7 @@ const FadeInAnimation = ({
     return () => clearTimeout(timer);
   }, [customKey, time]);
 
-  return <div className={'fade-in-animation ' + customKey}>{children}</div>;
+  return <span className={'fade-in-animation ' + customKey}>{children}</span>;
 };
 
 export default FadeInAnimation;
