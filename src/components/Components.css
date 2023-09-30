@@ -1,9 +1,9 @@
 /*
     This is a global CSS file for all components.
-    It is imported in App.js
+    It is imported in App.tsx
 */
 
-@font-palette-values --palette-1 {
+@font-palette-values --header-palette-1 {
     font-family: 'Nabla';
     override-colors:
         1 #28866b,
@@ -17,7 +17,7 @@
         9 #ffffff;
 }
 
-@font-palette-values --palette-2 {
+@font-palette-values --header-palette-2 {
     font-family: 'Nabla';
     override-colors:
         1 #28866b,
@@ -31,6 +31,15 @@
         9 #ffffff;
 }
 
+.divider {
+    display: inline-block;
+    width: 500px;
+    height: 0.1em;
+    border-radius: 0.25em;
+    background-color: var(--cyan-600);
+    margin: 0 0.5em;
+}
+
 /* --------------------- */
 /* ---- HEADER CSS ---- */
 /* ------------------- */
@@ -38,9 +47,9 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Nabla', cursive;
 }
 
 .header__title {
@@ -50,15 +59,50 @@
     align-items: center;
     font-size: 3.2em;
     line-height: 1.1;
+    font-family: 'Nabla', cursive;
+    margin: 1rem 0;
+    text-shadow: 0 0 0.22rem var(--cyan-500);
 }
 
 .header__title__first {
     display: inline-flex;
-    font-palette: --palette-1;
+    font-palette: --header-palette-1;
 }
 
 .header__title__second {
-    font-palette: --palette-2;
+    font-palette: --header-palette-2;
+}
+
+.header__resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header__resume-main {
+    font-size: 1.2em;
+    color: var(--teal-400);
+    text-shadow: 0 0 0.0rem var(--cyan-500);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header__resume-main:hover {
+    text-shadow: 0 0 0.15rem var(--cyan-300);
+}
+
+.header__resume-sub {
+    font-size: 0.8em;
+}
+
+.header__resume-tech {
+    display: block;
+    font-size: 0.7em;
+    color: white;
 }
 /* --------------------- */
 
@@ -73,7 +117,6 @@
     position: relative;
     width: 0.7em;
     height: 1em;
-    cursor: url("/src/assets/Hands-So-So-icon.png"), auto;
 }
 
 .letter-up__word {
@@ -98,13 +141,48 @@
 /* ----------------------------------- */
 /* ---- Fade In UP Animation CSS ---- */
 /* --------------------------------- */
-.fade-in-animation {
+.fade-in-up-animation {
     opacity: 0;
     transform: translateY(2.5rem);
     transition: opacity 1.3s ease-in-out, transform 1s ease-in-out;
 }
 
-.fade-in-animation--active {
+.fade-in-up-animation--active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* --------------------- */
+
+
+/* -------------------------------- */
+/* ---- Fade In Animation CSS ---- */
+/* ------------------------------ */
+.fade-in-animation {
+    opacity: 0;
+    transition: opacity 1.3s ease-in-out;
+}
+
+.fade-in-animation--active {
+    opacity: 1;
+}
+
+
+/* --------------------------------- */
+/* ---- Bouncing Animation CSS ---- */
+/* ------------------------------- */
+.bouncing-animation {
+    animation: bouncing 1.5s ease-in-out infinite;
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
