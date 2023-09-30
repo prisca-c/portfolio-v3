@@ -1,5 +1,5 @@
 const MyStack = () => {
-  return <div>MyStack</div>;
+  return <div className={'my-stack'}>MyStack</div>;
 };
 
 export default MyStack;
