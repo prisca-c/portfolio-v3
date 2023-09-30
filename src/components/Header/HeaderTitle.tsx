@@ -1,7 +1,7 @@
 import LetterUpAnimation from '../Animations/LetterUpAnimation.tsx';
 import FadeInUpAnimation from '../Animations/FadeInUpAnimation.tsx';
 
-const headerText = () => {
+const HeaderTitle = () => {
   const words: string[] = ['Prisca', 'CASTANIER'];
 
   return (
@@ -30,4 +30,4 @@ const headerText = () => {
   );
 };
 
-export default headerText;
+export default HeaderTitle;

@@ -1,11 +1,11 @@
-import HeaderText from './HeaderText.tsx';
+import HeaderTitle from './HeaderTitle.tsx';
 import FadeInAnimation from '../Animations/FadeInAnimation.tsx';
 import BouncingAnimation from '../Animations/BouncingAnimation.tsx';
 
 const Header = () => {
   return (
     <div className={'header'}>
-      <HeaderText />
+      <HeaderTitle />
       <FadeInAnimation classKey={'resume'} time={3700}>
         <h2 className={'header__resume'}>
           <span className={'header__resume-main'}>
