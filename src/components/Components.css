@@ -1,150 +1,159 @@
 /*
-    This is a global CSS file for all components.
-    It is imported in App.tsx
+  This is a global CSS file for all components.
+  It is imported in App.tsx
 */
 
 @font-palette-values --header-palette-1 {
-    font-family: 'Nabla';
-    override-colors:
-        1 #28866b,
-        2 #39965d,
-        3 #145641,
-        4 #489D76,
-        5 #8AFFB1,
-        6 #1effbb,
-        7 #00A0E1,
-        8 #1EE1FF,
-        9 #ffffff;
+  font-family: 'Nabla';
+  override-colors:
+      1 #28866b,
+      2 #39965d,
+      3 #145641,
+      4 #489D76,
+      5 #8AFFB1,
+      6 #1effbb,
+      7 #00A0E1,
+      8 #1EE1FF,
+      9 #ffffff;
 }
 
 @font-palette-values --header-palette-2 {
-    font-family: 'Nabla';
-    override-colors:
-        1 #28866b,
-        2 #39965d,
-        3 #145641,
-        4 #489D76,
-        5 #8AFFB1,
-        6 #00A0E1,
-        7 #1effbb,
-        8 #1EE1FF,
-        9 #ffffff;
+  font-family: 'Nabla';
+  override-colors:
+      1 #28866b,
+      2 #39965d,
+      3 #145641,
+      4 #489D76,
+      5 #8AFFB1,
+      6 #00A0E1,
+      7 #1effbb,
+      8 #1EE1FF,
+      9 #ffffff;
 }
 
 .divider {
-    display: inline-block;
-    max-width: 500px;
-    width: 100%;
-    height: 0.1em;
-    border-radius: 0.25em;
-    background-color: var(--cyan-600);
-    margin: 0 0.5em;
+  display: inline-block;
+  max-width: 500px;
+  width: 100%;
+  height: 0.1em;
+  border-radius: 0.25em;
+  background-color: var(--cyan-600);
+  margin: 0 0.5em;
 }
 
+/* ################################# */
+/* ######  LANDING PAGE CSS  ###### */
+/* ############################### */
 .landing-page {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-snap-align: start;
-    scroll-padding-top: 5rem;
-    scroll-padding-bottom: 5rem;
-    scroll-padding-left: 0;
-    scroll-padding-right: 0;
-    scroll-snap-stop: always;
-    -webkit-overflow-scrolling: touch;
-    /*    scroll snap on each div inside*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  scroll-snap-type: y mandatory;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  height: 100vh;
+  -webkit-overflow-scrolling: touch;
+}
+
+.landing-page__section {
+  scroll-snap-align: start;
 }
 /* --------------------- */
 /* ---- HEADER CSS ---- */
 /* ------------------- */
 .header {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(1.5rem + 4vw);
-    line-height: 1.1;
-    font-family: 'Nabla', cursive;
-    margin: 1rem 0;
-    text-shadow: 0 0 0.22rem var(--cyan-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(1.5rem + 4vw);
+  line-height: 1.1;
+  font-family: 'Nabla', cursive;
+  margin: 1rem 0;
+  text-shadow: 0 0 0.22rem var(--cyan-500);
 }
 
 .header__title__first {
-    display: inline-flex;
-    font-palette: --header-palette-1;
+  display: inline-flex;
+  font-palette: --header-palette-1;
 }
 
 .header__title__second {
-    font-palette: --header-palette-2;
+  font-palette: --header-palette-2;
 }
 
 .header__resume {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 600;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
 }
 
 .header__resume-main {
-    margin-top: 0.8rem;
-    font-size: 1.2em;
-    color: var(--teal-400);
-    text-shadow: 0 0 0.0rem var(--cyan-500);
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin-top: 0.8rem;
+  font-size: calc(0.8rem + 2vw);
+  color: var(--teal-400);
+  text-shadow: 0 0 0.0rem var(--cyan-500);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .header__resume-main:hover {
-    text-shadow: 0 0 0.15rem var(--cyan-300);
+  text-shadow: 0 0 0.15rem var(--cyan-300);
 }
 
 .header__resume-sub {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .header__resume-tech {
-    display: block;
-    font-size: 0.7em;
-    color: white;
+  display: block;
+  font-size: 0.7em;
+  color: white;
 }
 
 .header__resume-scroll {
-    margin: 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 1.5rem;
-    animation: shadow-pulse 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: calc(0.8rem + 1vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__resume-scroll-sub-1 {
+  color: var(--emerald-300);
+}
+
+.header__resume-scroll-sub-2 {
+  animation: shadow-pulse 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
 }
 
 @keyframes shadow-pulse {
-    0% {
-        text-shadow: 0 0 0.0rem var(--cyan-500);
-    }
-    50% {
-        text-shadow: 0 0 0.30rem var(--cyan-500);
-    }
-    100% {
-        text-shadow: 0 0 0.0rem var(--cyan-500);
-    }
+  0% {
+    text-shadow: 0 0 0.0rem var(--cyan-500);
+  }
+  50% {
+    text-shadow: 0 0 0.30rem var(--cyan-500);
+  }
+  100% {
+    text-shadow: 0 0 0.0rem var(--cyan-500);
+  }
 }
 /* --------------------- */
 
@@ -153,29 +162,29 @@
 /* ---- Letter Animation UP CSS ---- */
 /* -------------------------------- */
 .letter-up__box {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 0.7em;
-    height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 0.7em;
+  height: 1em;
 }
 
 .letter-up__word {
-    position: absolute;
-    display: inline-block;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: rotate(0deg) translate(0, 0);
-    margin: 0;
+  position: absolute;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: rotate(0deg) translate(0, 0);
+  margin: 0;
 }
 
 .letter-up__word--rotate-even {
-    transform: rotate(-10deg) translate(0, -1.2rem);
+  transform: rotate(-10deg) translate(0, -1.2rem);
 }
 
 .letter-up__word--rotate-odd {
-    transform: rotate(10deg) translate(0, -1.2rem);
+  transform: rotate(10deg) translate(0, -1.2rem);
 }
 /* --------------------- */
 
@@ -184,15 +193,15 @@
 /* ---- Fade In UP Animation CSS ---- */
 /* --------------------------------- */
 .fade-in-up-animation {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(2.5rem);
-    transition: opacity 1.3s ease-in-out, transform 1s ease-in-out;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(2.5rem);
+  transition: opacity 1.3s ease-in-out, transform 1s ease-in-out;
 }
 
 .fade-in-up-animation--active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* --------------------- */
@@ -202,13 +211,13 @@
 /* ---- Fade In Animation CSS ---- */
 /* ------------------------------ */
 .fade-in-animation {
-    display: inline-block;
-    opacity: 0;
-    transition: opacity 1.3s ease-in-out;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 1.3s ease-in-out;
 }
 
 .fade-in-animation--active {
-    opacity: 1;
+  opacity: 1;
 }
 
 
@@ -216,18 +225,34 @@
 /* ---- Bouncing Animation CSS ---- */
 /* ------------------------------- */
 .bouncing-animation {
-    display: inline-block;
-    animation: bouncing 1.5s ease-in-out infinite;
+  display: inline-block;
+  animation: bouncing 1.5s ease-in-out infinite;
 }
 
 @keyframes bouncing {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-0.5rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-0.5rem);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* --------------------- */
+
+
+/* ----------------------- */
+/* ---- MY STACK CSS ---- */
+/* --------------------- */
+
+.my-stack {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
