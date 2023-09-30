@@ -19,10 +19,10 @@ const Header = () => {
           {/*<span className={'divider'}></span>*/}
         </h2>
         <p className={'header__resume-scroll'}>
-          Wanna know more ?
-          <br />
-          Scroll down
-          <br />
+          <span className={'header__resume-scroll-sub-1'}>
+            Open to new opportunities
+          </span>
+          <span className={'header__resume-scroll-sub-2'}>Scroll down</span>
           <BouncingAnimation>
             <span className={'header__resume-arrow'}>↓</span>
           </BouncingAnimation>
