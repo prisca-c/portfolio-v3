@@ -1,0 +1,23 @@
+{
+  "front": [
+    "React",
+    "Vue"
+  ],
+  "back": [
+    "AdonisJS",
+    "Laravel",
+    "Flask"
+  ],
+  "database": [
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "Redis"
+  ],
+  "languages": [
+    "JavaScript",
+    "TypeScript",
+    "PHP",
+    "Python"
+  ]
+}
