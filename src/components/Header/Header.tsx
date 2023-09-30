@@ -11,21 +11,22 @@ const Header = () => {
           <span className={'header__resume-main'}>
             Full Stack Developer
             <span className={'header__resume-tech'}>
-              React • Vue • AdonisJS • Laravel • TypeScript
+              React • Vue • AdonisJS • Laravel • TypeScript • &#123; . . .
+              &#125;
             </span>
           </span>
 
-          <span className={'divider'}></span>
-          <span className={'header__resume-scroll'}>
-            Wanna know more ?
-            <br />
-            Scroll down
-            <br />
-            <BouncingAnimation>
-              <span className={'header__resume-arrow'}>↓</span>
-            </BouncingAnimation>
-          </span>
+          {/*<span className={'divider'}></span>*/}
         </h2>
+        <p className={'header__resume-scroll'}>
+          Wanna know more ?
+          <br />
+          Scroll down
+          <br />
+          <BouncingAnimation>
+            <span className={'header__resume-arrow'}>↓</span>
+          </BouncingAnimation>
+        </p>
       </FadeInAnimation>
     </div>
   );
