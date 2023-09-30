@@ -1,10 +1,10 @@
 import './components/Components.css';
-import Header from './components/Header/Header.tsx';
+import LandingPage from './pages/LandingPage.tsx';
 
 const App = () => {
   return (
     <div className={'app'}>
-      <Header />
+      <LandingPage />
     </div>
   );
 };
