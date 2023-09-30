@@ -33,7 +33,8 @@
 
 .divider {
     display: inline-block;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     height: 0.1em;
     border-radius: 0.25em;
     background-color: var(--cyan-600);
@@ -103,6 +104,22 @@
     display: block;
     font-size: 0.7em;
     color: white;
+}
+
+.header__resume-scroll {
+    animation: shadow-pulse 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        text-shadow: 0 0 0.0rem var(--cyan-500);
+    }
+    50% {
+        text-shadow: 0 0 0.30rem var(--cyan-500);
+    }
+    100% {
+        text-shadow: 0 0 0.0rem var(--cyan-500);
+    }
 }
 /* --------------------- */
 
