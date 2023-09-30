@@ -41,6 +41,24 @@
     margin: 0 0.5em;
 }
 
+.landing-page {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    scroll-padding-top: 5rem;
+    scroll-padding-bottom: 5rem;
+    scroll-padding-left: 0;
+    scroll-padding-right: 0;
+    scroll-snap-stop: always;
+    -webkit-overflow-scrolling: touch;
+    /*    scroll snap on each div inside*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* --------------------- */
 /* ---- HEADER CSS ---- */
 /* ------------------- */
@@ -79,13 +97,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
     text-align: center;
     font-weight: 600;
     margin: 0;
 }
 
 .header__resume-main {
+    margin-top: 0.8rem;
     font-size: 1.2em;
     color: var(--teal-400);
     text-shadow: 0 0 0.0rem var(--cyan-500);
