@@ -8,7 +8,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #ffffff;
   background-color: #242424;
 
   font-synthesis: none;
@@ -17,38 +17,42 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-    --emerald-50: #F0FFF4;
-    --emerald-100: #C6F6D5;
-    --emerald-200: #9AE6B4;
-    --emerald-300: #68D391;
-    --emerald-400: #48BB78;
-    --emerald-500: #38A169;
-    --emerald-600: #2F855A;
-    --emerald-700: #276749;
-    --emerald-800: #22543D;
-    --emerald-900: #1C4532;
+  --emerald-50: #F0FFF4;
+  --emerald-100: #C6F6D5;
+  --emerald-200: #9AE6B4;
+  --emerald-300: #68D391;
+  --emerald-400: #48BB78;
+  --emerald-500: #38A169;
+  --emerald-600: #2F855A;
+  --emerald-700: #276749;
+  --emerald-800: #22543D;
+  --emerald-900: #1C4532;
 
-    --cyan-50: #ECFEFF;
-    --cyan-100: #CFFAFE;
-    --cyan-200: #A5F3FC;
-    --cyan-300: #67E8F9;
-    --cyan-400: #22D3EE;
-    --cyan-500: #06B6D4;
-    --cyan-600: #0891B2;
-    --cyan-700: #0E7490;
-    --cyan-800: #155E75;
-    --cyan-900: #164E63;
+  --cyan-50: #ECFEFF;
+  --cyan-100: #CFFAFE;
+  --cyan-200: #A5F3FC;
+  --cyan-300: #67E8F9;
+  --cyan-400: #22D3EE;
+  --cyan-500: #06B6D4;
+  --cyan-600: #0891B2;
+  --cyan-700: #0E7490;
+  --cyan-800: #155E75;
+  --cyan-900: #164E63;
 
-    --teal-50: #F0FDFA;
-    --teal-100: #CCFBF1;
-    --teal-200: #99F6E4;
-    --teal-300: #5EEAD4;
-    --teal-400: #2DD4BF;
-    --teal-500: #14B8A6;
-    --teal-600: #0D9488;
-    --teal-700: #0F766E;
-    --teal-800: #115E59;
-    --teal-900: #134E4A;
+  --teal-50: #F0FDFA;
+  --teal-100: #CCFBF1;
+  --teal-200: #99F6E4;
+  --teal-300: #5EEAD4;
+  --teal-400: #2DD4BF;
+  --teal-500: #14B8A6;
+  --teal-600: #0D9488;
+  --teal-700: #0F766E;
+  --teal-800: #115E59;
+  --teal-900: #134E4A;
+
+  --color-primary: var(--cyan-500);
+  --color-secondary: var(--teal-500);
+  --color-tertiary: var(--emerald-500);
 }
 
 a {
@@ -73,7 +77,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 h1 {
