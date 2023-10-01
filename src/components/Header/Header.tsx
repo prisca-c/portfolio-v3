@@ -3,6 +3,15 @@ import FadeInAnimation from '../Animations/FadeInAnimation.tsx';
 import BouncingAnimation from '../Animations/BouncingAnimation.tsx';
 
 const Header = () => {
+  const techResume = [
+    'React',
+    'Vue',
+    'AdonisJS',
+    'Laravel',
+    'TypeScript',
+    '{ . . . }',
+  ];
+
   return (
     <div className={'header'}>
       <HeaderTitle />
@@ -11,8 +20,16 @@ const Header = () => {
           <span className={'header__resume-main'}>
             Full Stack Developer
             <span className={'header__resume-tech'}>
-              React • Vue • AdonisJS • Laravel • TypeScript • &#123; . . .
-              &#125;
+              {techResume.map((tech, index) => {
+                return (
+                  <span className={'header__resume-tech-item'} key={index}>
+                    {tech}
+                    {techResume.length - 1 !== index && (
+                      <span className={'text-secondary'}> • </span>
+                    )}
+                  </span>
+                );
+              })}
             </span>
           </span>
 
