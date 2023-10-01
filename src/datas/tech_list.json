@@ -1,23 +1,62 @@
 {
   "front": [
-    "React",
-    "Vue"
+    {
+      "name": "React",
+      "logo": "https://cdn.worldvectorlogo.com/logos/react-2.svg"
+    },
+    {
+      "name": "Vue",
+      "logo": "https://cdn.worldvectorlogo.com/logos/vue-9.svg"
+    }
   ],
   "back": [
-    "AdonisJS",
-    "Laravel",
-    "Flask"
+    {
+      "name": "AdonisJS",
+      "logo": "https://seeklogo.com/images/A/adonis-logo-56A7844207-seeklogo.com.png"
+    },
+    {
+      "name": "Laravel",
+      "logo": "https://cdn.worldvectorlogo.com/logos/laravel-2.svg"
+    },
+    {
+      "name": "Flask",
+      "logo": "https://cdn.worldvectorlogo.com/logos/flask.svg"
+    }
   ],
   "database": [
-    "PostgreSQL",
-    "MySQL",
-    "MongoDB",
-    "Redis"
+    {
+      "name": "PostgreSQL",
+      "logo": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"
+    },
+    {
+      "name": "MySQL",
+      "logo": "https://cdn.worldvectorlogo.com/logos/mysql-6.svg"
+    },
+    {
+      "name": "MongoDB",
+      "logo": "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg"
+    },
+    {
+      "name": "Redis",
+      "logo": "https://cdn.worldvectorlogo.com/logos/redis.svg"
+    }
   ],
   "languages": [
-    "JavaScript",
-    "TypeScript",
-    "PHP",
-    "Python"
+    {
+      "name": "JavaScript",
+      "logo": "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg"
+    },
+    {
+      "name": "TypeScript",
+      "logo": "https://cdn.worldvectorlogo.com/logos/typescript.svg"
+    },
+    {
+      "name": "PHP",
+      "logo": "https://cdn.worldvectorlogo.com/logos/php-1.svg"
+    },
+    {
+      "name": "Python",
+      "logo": "https://cdn.worldvectorlogo.com/logos/python-5.svg"
+    }
   ]
 }
