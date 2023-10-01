@@ -282,24 +282,61 @@
   grid-template-columns: 1fr 1fr;
   place-items: start;
   place-content: center;
+  width: 60vw;
+  margin: 0 auto;
+  gap: 1rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
   }
 }
 
 .my-stack__list-title {
   font-size: calc(1.5rem + 1vw);
   margin: 0;
+  background-clip: text;
+  background: linear-gradient(
+    90deg,
+    var(--teal-200) 0%,
+    var(--teal-200) 50%,
+    white 50%,
+    white 100%
+  ) fixed;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradient 20s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .my-stack__list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 0.5vh;
   margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  border-radius: 0.5rem;
+
+  @media (min-width: 1024px) {
+    padding: 2rem;
+  }
 }
 
 .my-stack__tech__item {
@@ -325,4 +362,5 @@
 .my-stack__tech__item-name {
   font-size: 1.2em;
   font-weight: 500;
+  margin: 0;
 }

@@ -29,3 +29,17 @@
 .bg-tertiary {
   background-color: var(--color-tertiary);
 }
+
+.bg-dark {
+  background-color: #242424;
+}
+
+.bg-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #242424,
+    #242424 10px,
+    var(--cyan-600) 10px,
+    var(--cyan-600) 14px
+  );
+}
