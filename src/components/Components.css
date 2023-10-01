@@ -249,10 +249,54 @@
 /* --------------------- */
 
 .my-stack {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.my-stack__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: start;
+  place-content: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.my-stack__title {
+  font-size: calc(1.5rem + 2vw);
+  margin: 0;
+}
+
+.my-stack__list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.my-stack__tech__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.my-stack__tech__item-logo {
+  width: calc(1.5rem + 2vw);
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.my-stack__tech__item-name {
+  font-size: 1.2em;
+  font-weight: 500;
 }
