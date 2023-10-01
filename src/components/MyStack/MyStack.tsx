@@ -10,6 +10,7 @@ const MyStack = () => {
 
   return (
     <div className={'my-stack'}>
+      <h2 className={'my-stack__title'}>I work with</h2>
       <div className={'my-stack__container'}>
         <TechItem title={title.front} techs={front} />
         <TechItem title={title.back} techs={back} />
