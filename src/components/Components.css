@@ -111,9 +111,13 @@
   align-items: center;
   font-size: calc(1.5rem + 4vw);
   line-height: 1.1;
-  font-family: 'Nabla', cursive;
   margin: 1rem 0;
   text-shadow: 0 0 0.22rem var(--cyan-500);
+  user-select: none;
+  font-family: 'Josefin Sans', sans-serif;
+  @media (min-width: 768px) {
+    font-family: 'Nabla', cursive;
+  }
 }
 
 .header__title__first {
