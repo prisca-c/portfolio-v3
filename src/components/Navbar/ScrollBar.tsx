@@ -1,9 +1,13 @@
 import { useEffect } from 'react';
+import sections from '../../datas/sections.json';
 
 const ScrollBar = () => {
-  const sectionsList = document.querySelectorAll<HTMLBaseElement>(
-    '.landing-page__section',
-  );
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleScroll = () => {
     const scrollable =
       document.documentElement.scrollHeight - window.innerHeight;
@@ -22,20 +26,34 @@ const ScrollBar = () => {
     }
   };
 
-  {
-    /*TODO: Handle circle position*/
-  }
+  const handleCircleStyle = (index: number) => {
+    return {
+      top: `${(index * 100) / (sections.length - 1)}%`,
+    };
+  };
 
-  useEffect(() => {
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const handleCircleOnClick = (name: string) => {
+    const section = document.getElementById(name);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="scrollbar">
       <div className="handle" id={'handle'}>
-        {[...sectionsList].map((_, index) => {
-          return <div className="handle__circle" key={index}></div>;
+        {sections.map((_, index) => {
+          return (
+            <div
+              className={`handle__circle handle__circle-${index}`}
+              key={index}
+              style={handleCircleStyle(index)}
+              onClick={() => handleCircleOnClick(sections[index].name)}
+            />
+          );
         })}
       </div>
     </div>
