@@ -16,7 +16,7 @@ const LandingPage = () => {
             id={section.name}
           >
             {section.class === 'header' && <Header />}
-            {section.class === 'my-stack' && <MyStack />}
+            {section.class === 'my-toolbox' && <MyStack />}
             {section.class === 'my-projects' && <MyProjects />}
           </section>
         );
