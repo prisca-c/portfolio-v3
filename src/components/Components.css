@@ -44,13 +44,17 @@
 /* ######  NAVBAR CSS  ###### */
 /* ######################### */
 .scrollbar {
+  display: none;
   position: fixed;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
-  display: flex;
   height: 50vh;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
 }
 
 .handle {
@@ -62,16 +66,30 @@
   border: 1px solid var(--color-secondary);
 }
 
-.handle__circle {
+.handle__circle, .handle__text {
   position: absolute;
-  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+}
+
+.handle__text {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  left: -2rem;
+  font-size: 0.8em;
+  color: var(--color-secondary);
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  user-select: none;
+}
+
+.handle__circle {
   width: calc(0.5rem + 0.5vw);
   height: calc(0.5rem + 0.5vw);
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--cyan-600);
+  transform: translate(-50%, -50%);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 

@@ -47,12 +47,19 @@ const ScrollBar = () => {
       <div className="handle" id={'handle'}>
         {sections.map((_, index) => {
           return (
-            <div
-              className={`handle__circle handle__circle-${index}`}
-              key={index}
-              style={handleCircleStyle(index)}
-              onClick={() => handleCircleOnClick(sections[index].name)}
-            />
+            <div key={index}>
+              <p
+                className={`handle__text handle__text-${index}`}
+                style={handleCircleStyle(index)}
+              >
+                {sections[index].name}
+              </p>
+              <div
+                className={`handle__circle handle__circle-${index}`}
+                style={handleCircleStyle(index)}
+                onClick={() => handleCircleOnClick(sections[index].name)}
+              />
+            </div>
           );
         })}
       </div>
